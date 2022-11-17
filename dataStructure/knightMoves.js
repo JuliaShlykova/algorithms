@@ -1,4 +1,3 @@
-
 function possibleNextSteps(square) {
   if (!square) return null;
   let allMoves = [[-2,-1], [-1,-2], [-2,1], [1,-2], [-1,2], [2, -1], [1,2], [2,1]];
@@ -30,7 +29,6 @@ function knightMoves(start, end) {
   while (!(curSquare.coor[0]===end[0]&&curSquare.coor[1]===end[1])) {
     curSquare = queue.shift();
     let moves = possibleNextSteps(curSquare.coor);
-
     let nextSquares = moves
       .filter(move=>!visitedSquares.includes(move.toString()))
       .map(move=>{
@@ -62,7 +60,5 @@ knightMovesFormat(path);
 // [1,2]
 // [3,1]
 // [4,3]
-
-
 
 export {knightMoves};
